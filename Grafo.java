@@ -3,7 +3,6 @@ import java.util.*;
 public class Grafo {
     private Map<Integer, List<Integer>> adjacencyList = new HashMap<>();
 
-    // Método para agregar un vertice (estadio)
     public void agregarVertice(int estadio) {
         if (adjacencyList.containsKey(estadio)) {
             System.out.println("El vertice ya existe.");
@@ -13,7 +12,6 @@ public class Grafo {
         }
     }
 
-    // Método para eliminar un vertice (estadio)
     public void eliminarVertice(int estadio) {
         if (!adjacencyList.containsKey(estadio)) {
             System.out.println("El vertice no existe.");
@@ -21,7 +19,7 @@ public class Grafo {
         }
 
         adjacencyList.remove(estadio);
-        // Eliminar el estadio de las listas de adyacencia de otros estadios
+     
         for (List<Integer> lista : adjacencyList.values()) {
             lista.remove(Integer.valueOf(estadio));
         }
@@ -29,7 +27,6 @@ public class Grafo {
         System.out.println("vertice eliminado.");
     }
 
-    // Método para agregar una arista entre dos vertices (estadios)
     public void agregarArista(int desde, int hacia) {
         if (!adjacencyList.containsKey(desde) || !adjacencyList.containsKey(hacia)) {
             System.out.println("Uno o ambos vertices no existen.");
@@ -40,7 +37,7 @@ public class Grafo {
         System.out.println("Arista agregada.");
     }
 
-    // Método para eliminar una arista entre dos vertices (estadios)
+  
     public void eliminarArista(int desde, int hacia) {
         if (!adjacencyList.containsKey(desde)) {
             System.out.println("El vertice no existe.");
@@ -55,7 +52,7 @@ public class Grafo {
         }
     }
 
-    // Método para mostrar la lista de todos los vertices
+
     public void mostrarvertices() {
         System.out.println("Lista de vertices:");
         for (int estadio : adjacencyList.keySet()) {
@@ -63,7 +60,6 @@ public class Grafo {
         }
     }
 
-    // Método para mostrar los vertices adyacentes a un vertice dado
     public void mostrarAdyacentes(int estadio) {
         if (!adjacencyList.containsKey(estadio)) {
             System.out.println("El vertice no existe.");
@@ -76,7 +72,7 @@ public class Grafo {
         }
     }
 
-    // Método para verificar si existe una arista entre dos vertices
+ 
     public void existeArista(int desde, int hacia) {
         if (!adjacencyList.containsKey(desde)) {
             System.out.println("El vertice no existe.");

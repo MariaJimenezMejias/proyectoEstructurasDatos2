@@ -15,13 +15,13 @@ public class GestorEstadios {
         String pais = scanner.nextLine();
         System.out.print("Capacidad: ");
         int capacidad = scanner.nextInt();
-        scanner.nextLine(); // Consumir el salto de línea pendiente
+        scanner.nextLine(); 
         System.out.print("Año de inauguración: ");
         int anio = scanner.nextInt();
-        scanner.nextLine(); // Consumir el salto de línea pendiente
+        scanner.nextLine(); 
         
         Estadio estadio = new Estadio(nombre, ciudad, estado, pais, capacidad, anio);  
-        // Insertar estadio en el árbol AVL
+
         estadiosPorNombre.insertar(estadio);
         System.out.println("Estadio registrado exitosamente.");
     }
@@ -29,11 +29,9 @@ public class GestorEstadios {
     public void removerEstadio() {
         System.out.print("Ingrese el nombre del estadio a eliminar: ");
         String nombre = scanner.nextLine().toUpperCase();
-        
-        // Crear un estadio temporal con el nombre para eliminarlo
+      
         Estadio estadio = new Estadio(nombre, "", "", "", 0, 0);
         
-        // Eliminar estadio del árbol AVL
         estadiosPorNombre.eliminar(estadio);
         System.out.println("Estadio eliminado si existía en el registro.");
     }
@@ -41,9 +39,7 @@ public class GestorEstadios {
     public void consultarEstadio() {
         System.out.print("Ingrese el nombre del estadio a consultar: ");
         String nombre = scanner.nextLine().toUpperCase();
-        
-        
-        // Buscar el estadio en el árbol AVL
+
         List<Estadio> resultado = estadiosPorNombre.obtenerElementosOrdenados();
         boolean encontrado = resultado.stream().anyMatch(e -> e.nombre.equals(nombre));
         
@@ -63,8 +59,6 @@ public class GestorEstadios {
 
     public void listarEstadiosPorPais() {
         Map<String, List<Estadio>> estadiosPorPais = new HashMap<>();
-        
-        // Recorremos los estadios en el árbol y agrupamos por país
         List<Estadio> estadios = estadiosPorNombre.obtenerElementosOrdenados();
         for (Estadio estadio : estadios) {
             estadiosPorPais.computeIfAbsent(estadio.pais, k -> new ArrayList<>()).add(estadio);
@@ -105,7 +99,7 @@ public class GestorEstadios {
             System.out.println("8. Salir");
             System.out.print("Seleccione una opcion: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea pendiente
+            scanner.nextLine(); 
             switch (opcion) {
                 case 1 -> registrarEstadio();
                 case 2 -> removerEstadio();

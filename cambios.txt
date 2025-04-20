@@ -1,0 +1,15 @@
+Se ha cambiado el hashmap por una lista de adyacencia con un nombre similar, fue el unico cambio realizado, ya que la profesora no permite el 
+hashmap, de igual forma se transifirio el codigo a java, porque segun la profesora si uno programo el primero en Java el segundo debe de ser
+programado en java de igual forma sin importar lo que diga su consigna.
+De igual forma se modifico un arraylist que NO se puede usar segun la PROFESORA.---> CAMBIOS POR HACER:
+No comprendo a que se refiere con AGREGAR LOS DIAGRAMAS, ya que ella SOLAMENTE PIDIO un diagrama y de clases por lo que supongo que era solo 1
+diagrama UML ya que no se especifica que clase de diagramas ella quiere.
+Segundo NO comprendo que quiere decir con el formato INEXISTENTE en la consigna para los casos de uso, ya que eso no se menciona por ningun 
+lado, se solicitara un desgloce y se procedera con la apelacion de los puntos que sean necesarios conforme la consigna.
+Segun ella los diagramas deben de realizarse en un editor de diagramas y que eso es parte de la documentacion, MENCIONA DIAGRAMAS cuando la 
+consigna dice:
+Diagramas de clases sin especificar cual o cuales y el unico diagrama de clases que hay es el UML 
+que ya tiene sus subtipos sin embargo, ella no menciona de que tipo, por lo que solicitar DIAGRAMAS
+DE CLASES no esta bien redactado.
+Menciona que debe estar hecho en un editor de diagramas, lo cual lo esta, sin embargo, se pego una
+foto por lo que bajo puntos por eso.
